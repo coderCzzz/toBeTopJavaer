@@ -14,13 +14,13 @@ Java是一个面向对象的语言。每一个学习过Java的人都知道，封
 
 继承（Inheritance）是一种联结类与类的层次模型。指的是一个类（称为子类、子接口）继承另外的一个类（称为父类、父接口）的功能，并可以增加它自己的新功能的能力，继承是类与类或者接口与接口之间最常见的关系；继承是一种[`is-a`][1]关系。（图片来自网络，侵删。）
 
-![Inheritance][2]
+[<img src="../../pics/java-basic/Inheritance/Generalization.jpg" alt="pass3" width="515" height="399" class="aligncenter size-full wp-image-2311" />][2]
 
 ## 组合
 
 组合(Composition)体现的是整体与部分、拥有的关系，即[`has-a`][3]的关系。
 
-![Composition][4]
+[Composition][<img src="../../pics/java-basic/Inheritance/Composition.jpg" alt="pass3" width="800" height="300" class="aligncenter size-full wp-image-2311" />][4]
 
 ## 组合与继承的区别和联系
 

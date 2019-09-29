@@ -1,4 +1,4 @@
-![overloading-vs-overriding][1]
+<img src="../../pics/java-basic/overload-vs-override/overloading-vs-overriding.png" alt="pass3" width="515" height="399" class="aligncenter size-full wp-image-2311" />[1]
 
 重载（Overloading）和重写（Overriding）是Java中两个比较重要的概念。但是对于新手来说也比较容易混淆。本文通过两个简单的例子说明了他们之间的区别。
 
@@ -109,5 +109,5 @@
 
 [Overriding vs. Overloading in Java][2]
 
- [1]: http://www.hollischuang.com/wp-content/uploads/2016/03/overloading-vs-overriding.png
+
  [2]: http://www.programcreek.com/2009/02/overriding-and-overloading-in-java-with-examples/

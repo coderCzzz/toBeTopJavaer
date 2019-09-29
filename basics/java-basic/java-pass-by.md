@@ -132,7 +132,7 @@ print in main , name is Hollis
 
 那么，我来给大家总结一下，值传递和引用传递之前的区别的重点是什么。
 
-[<img src="http://www.hollischuang.com/wp-content/uploads/2018/04/pass.jpg" alt="pass" width="474" height="73" class="aligncenter size-full wp-image-2289" />][3]
+[<img src="../../pics/java-basic/pass/pass.jpg" alt="pass" width="474" height="73" class="aligncenter size-full wp-image-2289" />][3]
 
 我们上面看过的几个pass的例子中，都只关注了实际参数内容是否有改变。如传递的是User对象，我们试着改变他的name属性的值，然后检查是否有改变。其实，在实验方法上就错了，当然得到的结论也就有问题了。
 
@@ -172,7 +172,7 @@ print in main , user is User{name='Hollis', gender='Male'}
 
 我们来画一张图，看一下整个过程中发生了什么，然后我再告诉你，为啥Java中只有值传递。
 
-[<img src="http://www.hollischuang.com/wp-content/uploads/2018/04/pass1.png" alt="pass1" width="859" height="721" class="aligncenter size-full wp-image-2293" />][4]
+[<img src="../../pics/java-basic/pass/pass1.png" alt="pass1" width="859" height="721" class="aligncenter size-full wp-image-2293" />][4]
 
 稍微解释下这张图，当我们在main中创建一个User对象的时候，在堆中开辟一块内存，其中保存了name和gender等数据。然后hollis持有该内存的地址`0x123456`（图1）。当尝试调用pass方法，并且hollis作为实际参数传递给形式参数user的时候，会把这个地址`0x123456`交给user，这时，user也指向了这个地址（图2）。然后在pass方法内对参数进行修改的时候，即`user = new User();`，会重新开辟一块`0X456789`的内存，赋值给user。后面对user的任何修改都不会改变内存`0X123456`的内容（图3）。
 
@@ -182,7 +182,7 @@ print in main , user is User{name='Hollis', gender='Male'}
 
 我们再来回顾下之前的那个“砸电视”的例子，看那个例子中的传递过程发生了什么。
 
-[<img src="http://www.hollischuang.com/wp-content/uploads/2018/04/pass21.png" alt="pass2" width="832" height="732" class="aligncenter size-full wp-image-2307" />][5]
+[<img src="../../pics/java-basic/pass/pass21.png" alt="pass2" width="832" height="732" class="aligncenter size-full wp-image-2307" />][5]
 
 同样的，在参数传递的过程中，实际参数的地址`0X1213456`被拷贝给了形参，只是，在这个方法中，并没有对形参本身进行修改，而是修改的形参持有的地址中存储的内容。
 
@@ -190,7 +190,7 @@ print in main , user is User{name='Hollis', gender='Male'}
 
 那么，既然这样，为啥上面同样是传递对象，传递的String对象和User对象的表现结果不一样呢？我们在pass方法中使用`name = "hollischuang";`试着去更改name的值，阴差阳错的直接改变了name的引用的地址。因为这段代码，会new一个String，在把引用交给name，即等价于`name = new String("hollischuang");`。而原来的那个"Hollis"字符串还是由实参持有着的，所以，并没有修改到实际参数的值。
 
-[<img src="http://www.hollischuang.com/wp-content/uploads/2018/04/pass3.png" alt="pass3" width="515" height="399" class="aligncenter size-full wp-image-2311" />][6]
+[<img src="../../pics/java-basic/pass/pass3.png" alt="pass3" width="515" height="399" class="aligncenter size-full wp-image-2311" />][6]
 
 **所以说，Java中其实还是值传递的，只不过对于对象参数，值的内容是对象的引用。**
 

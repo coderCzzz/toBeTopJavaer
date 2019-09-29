@@ -6,16 +6,16 @@
     String s = "abcd";
     
 
-![String-Immutability-1][1]
+[<img src="../../pics/java-basic/final-string/String-Immutability-1.jpeg" alt="pass3" width="515" height="399" class="aligncenter size-full wp-image-2311" />][1]
 
 `s`中保存了string对象的引用。下面的箭头可以理解为“存储他的引用”。
 
 ## 使用变量来赋值变量
 
-    String s2 = s;
+   String s2 = s;
     
 
-![String-Immutability-2][2]
+[<img src="../../pics/java-basic/final-string/String-Immutability-2.jpeg" alt="pass3" width="515" height="399" class="aligncenter size-full wp-image-2311" />][2]
 
 s2保存了相同的引用值，因为他们代表同一个对象。
 
@@ -23,8 +23,7 @@ s2保存了相同的引用值，因为他们代表同一个对象。
 
     s = s.concat("ef");
     
-
-![string-immutability][3]
+[<img src="../../pics/java-basic/final-string/String-Immutability-2.jpeg" alt="pass3" width="515" height="399" class="aligncenter size-full wp-image-2311" />][3]
 
 `s`中保存的是一个重新创建出来的string对象的引用。
 
